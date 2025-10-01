@@ -19,6 +19,7 @@ export class QuickDrawRoom extends Room<QuickDrawState> {
     this.maxClients = 2;
     this.setState(new QuickDrawState());
     this.state.roomId = this.roomId;
+    this.autoDispose = false;
     if (options?.roomCode) {
       this.state.code = options.roomCode;
     }
